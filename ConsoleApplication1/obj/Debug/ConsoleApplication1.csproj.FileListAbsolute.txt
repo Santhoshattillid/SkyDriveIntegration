@@ -1,0 +1,8 @@
+C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\ConsoleApplication1\bin\Debug\HgCo.WindowsLive.SkyDriveServiceClient.dll
+C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\ConsoleApplication1\bin\Debug\HgCo.WindowsLive.SkyDriveServiceClient.xml
+C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
