@@ -40,7 +40,6 @@
   <ItemGroup>
     <Reference Include="HgCo.WindowsLive.SkyDriveServiceClient">
       <HintPath>..\..\HgCo.WindowsLive.SkyDriveServiceClient.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
