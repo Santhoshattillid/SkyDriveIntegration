@@ -11,7 +11,7 @@ namespace SkyDriveIntegration
 
             var client = new SkyDriveServiceClient();
 
-            client.LogOn("santhosh@tillidsoft.com", "password@123");
+            //client.LogOn("santhosh@tillidsoft.com", "password@123");
 
             //var info = client.CreateRootWebFolder(folderName, WebFolderCategoryType.Photos,WebFolderItemShareType.Public);
 

@@ -1,0 +1,84 @@
+﻿.container
+{
+	border: 1px solid #EFEFEF;
+	position: fixed;
+	left: 50%;
+	top: 10px;
+	z-index: 100;
+	min-height: 410px;
+	width: 810px;
+	margin-left: -410px;
+    padding: 5px;
+    color: #aaa;
+}
+
+TABLE
+{
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #EFEFEF;
+    border-top: 2px solid #EEE;
+}
+TABLE TD
+{
+	padding: 8px;
+	line-height: 20px;
+	text-align: left;
+	vertical-align: top;
+}
+TABLE TR
+{
+	border-bottom: 1px solid #DDDDDD;
+}
+TABLE TBODY > TR:nth-child(odd) > TD, TABLE TBODY > TR:nth-child(odd) > TH
+{
+	background-color: #F9F9F9;
+}
+TABLE TBODY TR:hover > TD, TABLE TBODY TR:hover > TH
+{
+	background-color: #F5F5F5;
+}
+TABLE THEAD
+{
+	height: 40px;
+	text-align: left;
+}
+TABLE THEAD TH
+{
+	vertical-align: middle;
+	padding-left: 7px;
+	height: 40px;
+	text-align: left;
+}
+TABLE THEAD TH P
+{
+	font-size: 0.8em;
+	text-align: left;
+}
+TABLE TBODY TR.lastRow
+{
+	border-bottom: none;
+}
+TABLE TBODY TR TD.emptyColumn
+{
+	background-color: #FFF;
+}
+TABLE TBODY TR.lastRow TD:nth-child(2), TABLE TBODY TR.lastRow TD:nth-child(3)
+{
+	background-color: #F4F4F4;
+}
+#hidden {
+    display: none;
+    visibility: hidden;
+}
+.name,.link {
+    max-width: 400px;
+    word-wrap: break-word;
+}
+#TblFiles img {
+    width: 35px;
+    height: 35px;
+}
