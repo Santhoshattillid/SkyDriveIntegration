@@ -39,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HgCo.WindowsLive.SkyDriveServiceClient">
-      <HintPath>..\..\HgCo.WindowsLive.SkyDriveServiceClient.dll</HintPath>
+      <HintPath>.\HgCo.WindowsLive.SkyDriveServiceClient.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />

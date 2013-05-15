@@ -3,4 +3,4 @@ C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveInt
 C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\SkyDriveIntegration\obj\Debug\SkyDriveIntegration.dll
 C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\SkyDriveIntegration\obj\Debug\SkyDriveIntegration.pdb
 C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\SkyDriveIntegration\bin\HgCo.WindowsLive.SkyDriveServiceClient.dll
-C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\SkyDriveIntegration\bin\HgCo.WindowsLive.SkyDriveServiceClient.xml
+C:\Users\Santhosh.TILLID\Desktop\My Works\Expense Management\Support\SkyDriveIntegration\SkyDriveIntegration\obj\Debug\SkyDriveIntegration.csprojResolveAssemblyReference.cache
