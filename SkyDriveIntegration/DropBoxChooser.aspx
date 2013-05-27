@@ -13,7 +13,7 @@
     <script src="//js.live.net/v5.0/wl.js"></script>
     <script type="text/javascript">
         WL.init({ client_id: '000000004C0F3108', redirect_uri: "http://skydriveintegration.apphb.com/SkyDriveFileOpen.aspx" });
-        function uploadFile_fileDialog() {
+        function openfileDialog() {
             WL.fileDialog({
                 mode: "open",
                 select: "multi"
@@ -55,7 +55,7 @@
                 id="db-chooser" />
             <br />
 
-            <button id="skydriveopenpickerbutton" title="Choose from SkyDrive" style="direction: ltr; background-color: rgb(255, 255, 255); border: 1px solid rgb(9, 74, 178); height: 20px; padding-left: 4px; padding-right: 4px; text-align: center; cursor: pointer;">
+            <button id="skydriveopenpickerbutton" onclick="openfileDialog();return false;" title="Choose from SkyDrive" style="direction: ltr; background-color: rgb(255, 255, 255); border: 1px solid rgb(9, 74, 178); height: 20px; padding-left: 4px; padding-right: 4px; text-align: center; cursor: pointer;">
                 <img alt="" src="//js.live.net/v5.0/images/SkyDrivePicker/SkyDriveIcon_blue.png" style="vertical-align: middle; height: 16px;"><span style="font-family: 'Segoe UI', 'Segoe UI Web Regular', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif; font-size: 12px; font-weight: bold; color: rgb(9, 74, 178); text-align: center; vertical-align: middle; margin-left: 2px; margin-right: 0px;">Open from SkyDrive</span></button>
 
             <script type="text/javascript">
