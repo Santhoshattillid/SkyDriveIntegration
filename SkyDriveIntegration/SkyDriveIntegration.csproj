@@ -60,6 +60,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\SkyDrive.png" />
     <Content Include="Content\SkyDriveChooser.css" />
     <Content Include="Default.aspx" />
     <Content Include="DropBoxChooser.aspx" />
