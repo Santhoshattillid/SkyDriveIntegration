@@ -13,7 +13,6 @@
             element: "skydrivechooser",
             mode: "open",
             select: "multi",
-            scope: "wl.signin",
             onselected: onDownloadFileCompleted,
             onerror: onUploadFileError
         });
