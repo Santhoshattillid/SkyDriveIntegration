@@ -18,14 +18,14 @@
                 function (response) {
                     var msg = "";
                     // For each folder selected...
-                    if (response.data.folders.length > 0) {
+                    if (response.data.folders != undefined && response.data.folders.length > 0) {
                         for (folder = 0; folder < response.data.folders.length; folder++) {
                             // Use folder IDs to iterate through child folders and files as needed.
                             msg += "\n" + response.data.folders[folder].id;
                         }
                     }
                     // For each file selected...
-                    if (response.data.files.length > 0) {
+                    if (response.data.files != undefined && response.data.files.length > 0) {
                         for (file = 0; file < response.data.files.length; file++) {
                             // Use file IDs to iterate through files as needed.
                             msg += "\n" + response.data.files[file].id;
