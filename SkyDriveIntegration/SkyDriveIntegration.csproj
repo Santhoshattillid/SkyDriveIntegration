@@ -63,6 +63,7 @@
     <Content Include="Content\SkyDriveChooser.css" />
     <Content Include="Default.aspx" />
     <Content Include="DropBoxChooser.aspx" />
+    <Content Include="SkyDriveChooser.aspx" />
     <Content Include="UnUsedCode.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -82,6 +83,13 @@
       <DependentUpon>DropBoxChooser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkyDriveChooser.aspx.cs">
+      <DependentUpon>SkyDriveChooser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SkyDriveChooser.aspx.designer.cs">
+      <DependentUpon>SkyDriveChooser.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
