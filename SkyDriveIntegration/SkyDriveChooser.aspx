@@ -7,7 +7,7 @@
     <title></title>
     <script src="//js.live.net/v5.0/wl.js"></script>
     <script type="text/javascript">
-        WL.init({ client_id: '000000004C0F3108', redirect_uri: "http://skydriveintegration.apphb.com/SkyDriveChooser.aspx" });
+        WL.init({ client_id: '000000004C0F3108', redirect_uri: "http://skydriveintegration.apphb.com/SkyDriveFileOpen.aspx" });
         WL.ui({
             name: "skydrivepicker",
             element: "skydrivechooser",
