@@ -24,8 +24,8 @@
                     if (response.data.files != undefined && response.data.files.length > 0) {
                         for (var file = 0; file < response.data.files.length; file++) {
                             var rowClone = $('#hidden').clone();
-                            rowClone.find('img').attr('src', '');
-                            rowClone.find('img').attr('href', '');
+                            rowClone.find('img').attr('src', '//js.live.net/v5.0/images/SkyDrivePicker/SkyDriveIcon_blue.png');
+                            rowClone.find('img').attr('href', '//js.live.net/v5.0/images/SkyDrivePicker/SkyDriveIcon_blue.png');
                             rowClone.find('.name').html(response.data.files[file].name);
                             rowClone.find('.link').html(response.data.files[file].source);
                             $('#TblFiles tbody').append(rowClone);
@@ -33,7 +33,6 @@
                             rowClone.attr('id', '');
                         }
                     }
-                    alert(msg);
                 },
                 function (responseFailed) {
                     document.getElementById("info").innerText =
