@@ -12,9 +12,9 @@
             name: "skydrivepicker",
             element: "skydrivechooser",
             mode: "open",
-            select: "multi" //,
-            //onselected: onDownloadFileCompleted,
-            //onerror: onUploadFileError
+            select: "multi",
+            onselected: onDownloadFileCompleted,
+            onerror: onUploadFileError
         });
         function onDownloadFileCompleted(response) {
             var msg = "";
@@ -39,14 +39,16 @@
         function onUploadFileError(response) {
             document.getElementById("info").innerText =
                 "Error getting folder info: " + response.error.message;
+            alert(response.error.message);
         }
     </script>
 </head>
 <body>
-
-    <div id="skydrivechooser">
-    </div>
-    <div id="info">
-    </div>
+    <form runat="server">
+        <div id="skydrivechooser">
+        </div>
+        <div id="info">
+        </div>
+    </form>
 </body>
 </html>
