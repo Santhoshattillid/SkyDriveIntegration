@@ -75,10 +75,13 @@ TABLE TBODY TR.lastRow TD:nth-child(2), TABLE TBODY TR.lastRow TD:nth-child(3)
     visibility: hidden;
 }
 .name,.link {
-    max-width: 400px;
+    width: 300px;
     word-wrap: break-word;
 }
 #TblFiles img {
     width: 35px;
     height: 35px;
+}
+.RemoveDoc {
+    font-size: 1.0em;
 }

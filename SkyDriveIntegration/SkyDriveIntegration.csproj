@@ -63,6 +63,7 @@
     <Content Include="Content\SkyDriveChooser.css" />
     <Content Include="Default.aspx" />
     <Content Include="DropBoxChooser.aspx" />
+    <Content Include="UnUsedCode.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

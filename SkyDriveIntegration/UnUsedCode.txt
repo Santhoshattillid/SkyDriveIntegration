@@ -1,0 +1,2 @@
+﻿//var fileInfo = client.UploadWebFile(@"C:\Users\Santhosh.TILLID\Desktop\speed_up_software_development.jpg",subWebFolder);
+        //var url = "https://skydrive.live.com/?cid=" + fileInfo.OwnerCid + "&id=" + fileInfo.ResourceId;

@@ -8,7 +8,7 @@
     <script type="text/javascript" src="https://www.dropbox.com/static/api/1/dropins.js"
         id="dropboxjs" data-app-key="aow0w34qrmxvr39">
     </script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
     </script>
     <link href="Content/SkyDriveChooser.css" rel="stylesheet" />
 </head>
@@ -21,6 +21,23 @@
                 data-link-type="direct"
                 id="db-chooser" />
             <script type="text/javascript">
+
+                $(function()
+                {
+                    $('.RemoveDoc').live('click', function () {
+                        $(this).hide(500, function() {
+                            $(this).parents('tr').remove();
+                        });
+                    });
+                    var files = '';
+                    $('input[type="submit"]').click(function () {
+                        $('#TblFiles tbody tr').not('#hidden').each(function () {
+                            files += "," + $(this).find('.link').html();
+                        });
+                        $('input[id$="HdnFiles"]').val(files);
+                    });
+                });
+
                 document.getElementById("db-chooser").addEventListener("DbxChooserSuccess",
                     function (e) {
                         for (var index = 0; index < e.files.length; index++) {
@@ -54,6 +71,11 @@
                                 Url
                             </p>
                         </th>
+                        <th>
+                            <p>
+                                Actions
+                            </p>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,9 +91,18 @@
                             <div class="link">
                             </div>
                         </td>
+                        <td>
+                            <a href="#" class="RemoveDoc">Remove</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
+            
+            <div>
+                <asp:Button ID="BtnUpload" runat="server" Text="Upload Files" OnClick="BtnUploadClick" />
+                <asp:HiddenField ID="HdnFiles" runat="server" Value="" />
+            </div>
+
         </div>
     </form>
 </body>
