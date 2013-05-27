@@ -12,9 +12,9 @@
             name: "skydrivepicker",
             element: "skydrivechooser",
             mode: "open",
-            select: "multi",
-            onselected: onDownloadFileCompleted,
-            onerror: onUploadFileError
+            select: "multi" //,
+            //onselected: onDownloadFileCompleted,
+            //onerror: onUploadFileError
         });
         function onDownloadFileCompleted(response) {
             var msg = "";
@@ -43,10 +43,9 @@
     </script>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div id="skydrivechooser">
-        </div>
-    </form>
+
+    <div id="skydrivechooser">
+    </div>
     <div id="info">
     </div>
 </body>

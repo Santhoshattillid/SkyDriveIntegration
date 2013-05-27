@@ -64,6 +64,7 @@
     <Content Include="Default.aspx" />
     <Content Include="DropBoxChooser.aspx" />
     <Content Include="SkyDriveChooser.aspx" />
+    <Content Include="SkyDriveFileOpen.aspx" />
     <Content Include="UnUsedCode.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -89,6 +90,13 @@
     </Compile>
     <Compile Include="SkyDriveChooser.aspx.designer.cs">
       <DependentUpon>SkyDriveChooser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SkyDriveFileOpen.aspx.cs">
+      <DependentUpon>SkyDriveFileOpen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SkyDriveFileOpen.aspx.designer.cs">
+      <DependentUpon>SkyDriveFileOpen.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
