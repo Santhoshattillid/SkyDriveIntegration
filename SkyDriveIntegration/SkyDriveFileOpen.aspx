@@ -10,7 +10,8 @@
         WL.init({ client_id: '000000004C0F3108', redirect_uri: "http://skydriveintegration.apphb.com/SkyDriveChooser.aspx" });
         function uploadFile_fileDialog() {
             WL.fileDialog({
-                mode: "Open"
+                mode: "open",
+                select: "multi",
             }).then(
                 function (response) {
                     WL.upload({
