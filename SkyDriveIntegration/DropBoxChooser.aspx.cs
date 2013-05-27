@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Web;
 using HgCo.WindowsLive.SkyDrive;
 
 namespace SkyDriveIntegration
@@ -17,6 +18,8 @@ namespace SkyDriveIntegration
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //string url = "https://m3udpa.sn2.livefilestore.com/y2mI1vPgzTxjYo-eZ1ZW9e8O8H5Km4QNl_O-9YJIz7bqIUncxuN6kWrcpMVBZyiJAzkkE2_ZT77Y-Aosp3xqsAg77Cs3IvuxeUvfx7z5WfCIJ8zRbumNyYQcdhLG_hXTr45/training%20(1).txt?download&psid=1";
+            //DownloadFileFromSkyDrive(url);
         }
 
         protected void BtnUploadClick(object sender, EventArgs e)
@@ -66,15 +69,21 @@ namespace SkyDriveIntegration
                 if (!string.IsNullOrEmpty(fileUrl))
                 {
                     // code to download files from user drop box folder
-                    var response = client.UploadWebFile(DownloadFile(fileUrl), userskyDrivefolder);
-
-                    //Response.Write(response.Name);
+                    try
+                    {
+                        var response = client.UploadWebFile(DownloadFile(fileUrl), userskyDrivefolder);
+                    }
+                    catch (Exception)
+                    {
+                        var response = client.UploadWebFile(DownloadFileFromSkyDrive(fileUrl), userskyDrivefolder);
+                    }
                 }
             }
         }
 
         private string DownloadFile(string fileUrl)
         {
+            fileUrl = Server.UrlDecode(fileUrl.Substring(0, fileUrl.IndexOf('?')));
             var tempFile = Path.Combine(Path.GetDirectoryName(Path.GetTempFileName()), Path.GetFileName(fileUrl));
 
             if (File.Exists(tempFile))
@@ -105,6 +114,7 @@ namespace SkyDriveIntegration
                 request.Referer = url.ToString();
                 request.CookieContainer = cookieJar;
                 request.Method = "POST";
+                request.ContentLength = 0;
                 request.ContentType = "application/x-www-form-urlencoded";
                 using (var response = (HttpWebResponse)request.GetResponse())
                 {
@@ -126,6 +136,35 @@ namespace SkyDriveIntegration
                     }
                 }
             }
+            return tempFile;
+        }
+
+        private string DownloadFileFromSkyDrive(string fileUrl)
+        {
+            fileUrl = Server.UrlDecode(fileUrl.Substring(0, fileUrl.IndexOf('?')));
+            var tempFile = Path.Combine(Path.GetDirectoryName(Path.GetTempFileName()), Path.GetFileName(fileUrl));
+
+            if (File.Exists(tempFile))
+            {
+                File.Delete(tempFile);
+            }
+
+            var url = new Uri(fileUrl);
+
+            ServicePointManager.ServerCertificateValidationCallback = ((sender, certificate, chain, sslPolicyErrors) => true);
+
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = WebRequestMethods.Http.Get;
+            WebResponse response = request.GetResponse();
+
+            using (var responseStream = response.GetResponseStream())
+            {
+                using (var streamWriter = new StreamWriter(tempFile))
+                {
+                    if (responseStream != null) responseStream.CopyTo(streamWriter.BaseStream);
+                }
+            }
+
             return tempFile;
         }
     }
