@@ -14,20 +14,22 @@
                 select: "multi",
             }).then(
                 function (response) {
-                    WL.upload({
-                        path: response.data.folders[0].id,
-                        element: "file",
-                        overwrite: "rename"
-                    }).then(
-                        function (response) {
-                            document.getElementById("info").innerText =
-                                "File uploaded.";
-                        },
-                        function (responseFailed) {
-                            document.getElementById("info").innerText =
-                                "Error uploading file: " + responseFailed.error.message;
+                    var msg = "";
+                    // For each folder selected...
+                    if (response.data.folders.length > 0) {
+                        for (folder = 0; folder < response.data.folders.length; folder++) {
+                            // Use folder IDs to iterate through child folders and files as needed.
+                            msg += "\n" + response.data.folders[folder].id;
                         }
-                    );
+                    }
+                    // For each file selected...
+                    if (response.data.files.length > 0) {
+                        for (file = 0; file < response.data.files.length; file++) {
+                            // Use file IDs to iterate through files as needed.
+                            msg += "\n" + response.data.files[file].id;
+                        }
+                    }
+                    alert(msg);
                 },
                 function (responseFailed) {
                     document.getElementById("info").innerText =
@@ -37,10 +39,9 @@
         }
     </script>
 </head>
-<body onload="uploadFile_fileDialog();">
+<body>
     <form id="form1" runat="server">
-        <div>
-        </div>
+        <div onclick="uploadFile_fileDialog();">skydrive </div>
     </form>
 </body>
 </html>
